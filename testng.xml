@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Automation" parallel="tests">
+
+    <test name="Android Login Page Tests">
+
+        <parameter name="OS" value="Android" />
+        <parameter name="deviceQuery" value="@os='android'" />
+        <parameter name="environment" value="Cloud" />
+
+        <classes>
+            <class name="tests.LoginPageTest" />
+        </classes>
+    </test>
+
+    <test name="IOS Login Page Tests">
+
+        <parameter name="OS" value="IOS" />
+        <parameter name="deviceQuery" value="@os='ios'" />
+        <parameter name="environment" value="Cloud" />
+
+        <classes>
+            <class name="tests.LoginPageTest" />
+        </classes>
+    </test>
+
+    <test name="Android Payment Page Tests">
+
+        <parameter name="OS" value="Android" />
+        <parameter name="deviceQuery" value="@os='android'" />
+        <parameter name="environment" value="Cloud" />
+
+        <classes>
+            <class name="tests.PaymentPageTest" />
+        </classes>
+    </test>
+
+    <test name="IOS Payment Page Tests">
+
+        <parameter name="OS" value="IOS" />
+        <parameter name="deviceQuery" value="@os='ios'" />
+        <parameter name="environment" value="Cloud" />
+
+        <classes>
+            <class name="tests.PaymentPageTest" />
+        </classes>
+    </test>
+
+</suite>
