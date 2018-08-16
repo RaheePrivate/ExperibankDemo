@@ -72,8 +72,8 @@ public class BaseUtil {
 
             } else if (environment.equalsIgnoreCase("Cloud")) {
 
-//                capabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
-//                capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
+                capabilities.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+                capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
 
                 capabilities.setCapability("deviceQuery", deviceQuery);
                 driver = new IOSDriver<IOSElement>(new URL(configFileReader.getCloudURL()), capabilities);

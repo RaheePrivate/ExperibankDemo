@@ -10,6 +10,12 @@
 
     <dependencies>
 
+        <!--<dependency>-->
+            <!--<groupId>com.experitest</groupId>-->
+            <!--<artifactId>SeeTestClient</artifactId>-->
+            <!--<version>LATEST</version>-->
+        <!--</dependency>-->
+
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
