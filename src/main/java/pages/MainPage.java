@@ -28,7 +28,7 @@ public class MainPage extends PageObject {
     public MainPage clickMakePayment() {
         wait.until(ExpectedConditions.elementToBeClickable(makePaymentButton));
         makePaymentButton.click();
-        client.report("Clicked on Make Payment Button", true);
+//        client.report("Clicked on Make Payment Button", true);
         return this;
     }
 
@@ -57,10 +57,12 @@ public class MainPage extends PageObject {
     public boolean verifyUserOnMainPage() {
         wait.until(ExpectedConditions.elementToBeClickable(makePaymentButton));
         if (makePaymentButton.isDisplayed()) {
-            client.report("User on Main Page", true);
+//            client.report("User on Main Page", true);
+            System.out.println("User on Main Page");
             return true;
         }
-        client.report("User not on Main Page", false);
+//        client.report("User not on Main Page", false);
+        System.out.println("User not on Main Page");
         return false;
     }
 

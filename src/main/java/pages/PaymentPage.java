@@ -72,11 +72,13 @@ public class PaymentPage extends PageObject {
     public PaymentPage clickSendPaymentButton() {
         try {
             if (driver.findElement(By.xpath("//*[@id='sendPaymentButton' and @enabled='false']")).isDisplayed()) {
-                client.report("Send Payment Button Disabled, Not Sending Payment", true);
+                //client.report("Send Payment Button Disabled, Not Sending Payment", true);
+                System.out.println("Send Payment Button Disabled, Not Sending Payment");
             }
         } catch (Exception e) {
             sendPaymentButton.click();
-            client.report("Send Payment Button Enabled, Sending Payment", true);
+            //client.report("Send Payment Button Enabled, Sending Payment", true);
+            System.out.println("Send Payment Button Enabled, Sending Payment");
             wait.until(ExpectedConditions.elementToBeClickable(yesButton));
             yesButton.click();
             assertTrue(new MainPage(driver).verifyUserOnMainPage());
@@ -101,10 +103,12 @@ public class PaymentPage extends PageObject {
     public boolean verifyUserOnPaymentPage() {
         wait.until(ExpectedConditions.elementToBeClickable(phoneTextField));
         if (phoneTextField.isDisplayed()) {
-            client.report("User on Payment Page", true);
+//            client.report("User on Payment Page", true);
+            System.out.println("User on Payment Page");
             return true;
         }
-        client.report("User not on Payment Page", false);
+//        client.report("User not on Payment Page", false);
+        System.out.println("User not on Payment Page");
         return false;
     }
 }

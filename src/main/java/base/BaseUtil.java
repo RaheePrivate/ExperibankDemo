@@ -1,6 +1,5 @@
 package base;
 
-import com.experitest.appium.SeeTestClient;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.ios.IOSDriver;
@@ -23,7 +22,7 @@ import java.net.URL;
 public class BaseUtil {
 
     protected RemoteWebDriver driver = null;
-    protected SeeTestClient client = null;
+//    protected SeeTestClient client = null;
 
     protected ConfigFileReader configFileReader;
 
@@ -58,7 +57,7 @@ public class BaseUtil {
 
                 capabilities.setCapability("deviceQuery", deviceQuery);
                 driver = new AndroidDriver<AndroidElement>(new URL(configFileReader.getCloudURL()), capabilities);
-                client = new SeeTestClient(driver);
+//                client = new SeeTestClient(driver);
 
             }
 
@@ -69,7 +68,7 @@ public class BaseUtil {
                 capabilities.setCapability(MobileCapabilityType.UDID, deviceQuery);
                 capabilities.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
                 driver = new IOSDriver<>(new URL(configFileReader.getLocalURL()), capabilities);
-                client = new SeeTestClient(driver);
+//                client = new SeeTestClient(driver);
 
             } else if (environment.equalsIgnoreCase("Cloud")) {
 
@@ -78,10 +77,10 @@ public class BaseUtil {
 
                 capabilities.setCapability("deviceQuery", deviceQuery);
                 driver = new IOSDriver<IOSElement>(new URL(configFileReader.getCloudURL()), capabilities);
-                client = new SeeTestClient(driver);
+//                client = new SeeTestClient(driver);
 
-                client.install("cloud:com.experitest.ExperiBank", true, false);
-                client.launch("com.experitest.ExperiBank", true, true);
+//                client.install("cloud:com.experitest.ExperiBank", true, false);
+//                client.launch("com.experitest.ExperiBank", true, true);
             }
         }
     }

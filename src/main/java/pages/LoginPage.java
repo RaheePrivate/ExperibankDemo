@@ -45,10 +45,12 @@ public class LoginPage extends PageObject {
     public boolean verifyInvalidCredentials() {
         wait.until(ExpectedConditions.elementToBeClickable(invalidCredentialsMessage));
         if (invalidCredentialsMessage.isDisplayed()) {
-            client.report("Login Validation Passed", true);
+//            client.report("Login Validation Passed", true);
+            System.out.println("Login Validation Passed");
             return true;
         }
-        client.report("Login Validation Failed", false);
+//        client.report("Login Validation Failed", false);
+        System.out.println("Login Validation Failed");
         return false;
     }
 
