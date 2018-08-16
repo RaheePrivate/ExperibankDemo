@@ -35,34 +35,34 @@ public class LoginPageTest extends BaseUtil {
         assertTrue(mainPage.verifyUserOnMainPage());
     }
 
-//    @Test
-//    public void invalidCredentials() {
-//
-//        loginPage
-//                .enterUsername("comp")
-//                .enterPassword("comp")
-//                .clickLoginButton();
-//
-//        assertTrue(loginPage.verifyInvalidCredentials());
-//    }
-//
-//    @Test
-//    public void emptyUsername() {
-//
-//        loginPage
-//                .enterPassword("comp")
-//                .clickLoginButton();
-//
-//        assertTrue(loginPage.verifyInvalidCredentials());
-//    }
-//
-//    @Test
-//    public void emptyPassword() {
-//
-//        loginPage
-//                .enterUsername("comp")
-//                .clickLoginButton();
-//
-//        assertTrue(loginPage.verifyInvalidCredentials());
-//    }
+    @Test
+    public void invalidCredentials() {
+
+        loginPage
+                .enterUsername("comp")
+                .enterPassword("comp")
+                .clickLoginButton();
+
+        assertTrue(loginPage.verifyInvalidCredentials());
+    }
+
+    @Test
+    public void emptyUsername() {
+
+        loginPage
+                .enterPassword("comp")
+                .clickLoginButton();
+
+        assertTrue(loginPage.verifyInvalidCredentials());
+    }
+
+    @Test
+    public void emptyPassword() {
+
+        loginPage
+                .enterUsername("comp")
+                .clickLoginButton();
+
+        assertTrue(loginPage.verifyInvalidCredentials());
+    }
 }
